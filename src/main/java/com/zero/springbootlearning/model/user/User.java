@@ -1,4 +1,4 @@
-package com.zero.springbootlearning.model;
+package com.zero.springbootlearning.model.user;
 
 import java.io.Serializable;
 

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.zero.springbootlearning.context.DBProperties;
 import com.zero.springbootlearning.context.MyProperties;
 import com.zero.springbootlearning.utils.ModelUtils;
 
@@ -15,6 +16,8 @@ public class TestController {
 
     @Autowired
     private MyProperties myProperties;
+    @Autowired
+    private DBProperties dbProperties;
 
     @RequestMapping("/hello")
     public String hello() {
@@ -31,6 +34,11 @@ public class TestController {
             map.put(m.getKey(), m.getValue());
         }
         return map;
+    }
+    
+    @RequestMapping("/db")
+    public String getDB() {
+        return dbProperties.url;
     }
 
 }
