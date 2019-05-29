@@ -16,8 +16,8 @@ public class TestController {
 
     @Autowired
     private MyProperties myProperties;
-    @Autowired
-    private DBProperties dbProperties;
+//    @Autowired
+//    private DBProperties dbProperties;
 
     @RequestMapping("/hello")
     public String hello() {
@@ -36,9 +36,9 @@ public class TestController {
         return map;
     }
     
-    @RequestMapping("/db")
+    /*@RequestMapping("/db")
     public String getDB() {
         return dbProperties.url;
-    }
+    }*/
 
 }
