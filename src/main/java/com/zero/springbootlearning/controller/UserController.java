@@ -26,7 +26,7 @@ public class UserController {
 
     @RequestMapping("/test/findUserById")
     public User findUserById(Integer id) {
-        User user = userService.findUserById(1);
+        User user = userService.findUserById(id);
         return user;
     }
 
